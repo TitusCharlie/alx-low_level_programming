@@ -9,7 +9,7 @@
  * Return: Always (Success)
  */
 
-int mai(void)
+int main(void)
 
 {
 	int n, lastd;
