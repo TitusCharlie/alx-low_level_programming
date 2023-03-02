@@ -1,27 +1,27 @@
 #include <stdio.h>
-
 /**
- * _strncpy - concatenates two strings
+ * _strncat - concatenates two strings
  * @dest: dest string
  * @src: src string
- * @n: int n to copy
+ * @n: limit
  * Return: pointer to resulting string
  */
-char *_strncpy(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
-	int s = 0;
+	int s = 0, i = 0;
 
-	while (src[s] != 0 && s < n)
+	while (*(dest + s) != 0)
 	{
-		dest[s] = src[s];
 		s++;
 	}
-	while (s < n)
+	while (*(src + i) != 0)
 	{
-		dest[s] = 0;
-		s++;
+		*(dest + s + i)	= *(src + i);
+		if (i >= n)
+			break;
+		i++;
 	}
 
-
+	*(dest + s + i) = 0;
 	return (dest);
 }
