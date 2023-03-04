@@ -1,49 +1,31 @@
-#include <stdio.h>
 /**
- * print_number - print integer
- * Return: void
- * @n: number
+ * rot13 - rotate a letter by adding the 13 letter after it to it
+ * @str: letter to rotate
+ * Return: a pointer to the memory that stores the rotated massage
  */
-void print_number(int n)
+char *rot13(char *str)
 {
-	unsigned int size = n;
-
-	int digits = 0;
-
-	int i;
-
-	if (n < 0)
-		size = -n;
-	if (n == 0)
-		digits = 1;
-
-	while (size >= 1)
+	int j, i;
+	char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
+		'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
+		'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd',
+		'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
+		'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+	char rot13key[] = {'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
+		'W', 'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G',
+		'H', 'I', 'J', 'K', 'L', 'M', 'n', 'o', 'p', 'q', 'r',
+		's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c',
+		'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'};
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		size = size / 10;
-		digits++;
-	}
-
-	for (i = 0; i < digits; i++)
-	{
-
-		int pow = 1;
-
-		int j;
-
-		int d;
-
-		for (j = 0; j < digits - i - 1; j++)
+		for (j = 0; j < 52; j++)
 		{
-			pow = pow * 10;
+			if (str[i] == alphabet[j])
+			{
+				str[i] = rot13key[j];
+				break;
+			}
 		}
-
-		d = ((n / pow) % 10);
-		if (n < 0)
-		{
-			d = -d;
-			if (i == 0)
-				_putchar(45);
-		}
-		_putchar(48 + d);
 	}
+	return (str);
 }
