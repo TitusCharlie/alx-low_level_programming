@@ -22,13 +22,11 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	total = atoi(argv[1]); /*Convert str to int*/
-	
 	if (total <= 0)
 	{
 		printf("0\n");
 		return (0);
 	}
-
 	/*Declaring while*/
 	while (coins[position] != '\0')
 	{
