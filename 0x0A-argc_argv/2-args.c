@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	/*Declaring variables*/
 	int count = 0;
 
-	if (argv > 0)
+	if (argc > 0)
 	{
 		while (count < argc)
 		{

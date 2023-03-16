@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
+
 	/*Declaring while*/
 	while (coins[position] != '\0')
 	{
@@ -35,9 +36,9 @@ int main(int argc, char *argv[])
 		{
 			aux = (total / coins[position]);
 			change += aux;
-			total -= coins[position] * aux
+			total -= coins[position] * aux;
 		}
-			position++
+		position++;
 	}
 	printf("%d\n", change);
 	return (0);
