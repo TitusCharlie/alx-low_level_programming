@@ -12,7 +12,7 @@ size_t free_listint_safe(listint_t **h)
 	int diff;
 	listint_t *tempfile;
 
- 	if (!h || !*h)
+	if (!h || !*h)
 	return (0);
 
 	while (*h)
@@ -33,8 +33,6 @@ size_t free_listint_safe(listint_t **h)
 			break;
 		}
 	}
-
 	*h = NULL;
-
 	return (len);
 }
