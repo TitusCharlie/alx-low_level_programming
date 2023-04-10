@@ -3,8 +3,8 @@
 /**
  * create_file - Creates a file.
  * @filename: It is a pointer to the name of the file to create.
- * @text_content: It is a  pointer to a string to 
- * write to the file.
+ * @text_content: It is a  pointer to a string to
+ * write to the file
  * DO NOT COPY TLC
  * Return: If the function fails - -1.
  * Otherwise - 1.
