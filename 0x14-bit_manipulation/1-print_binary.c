@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_binary - this prints the binary equivalent of a 
+ * print_binary - this prints the binary equivalent of a
  * decimal number to STDOUT
  * @n: number to print in binary
  * DO NOT COPY TLC
