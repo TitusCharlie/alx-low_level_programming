@@ -1,15 +1,21 @@
 #include "main.h"
+
 /**
- * set_bin - this sets a bit at a given index to 1 
- * @n: pointer to the number
- * @index: index of the bit to set to 1
- * Return: 1for success, -1 for failure
+ * get_bit - this returns the value of a bit
+ * at an index in a decimal number
+ * @n: number to search
+ * @index: index of the bit
+ * DO NOT COPY TLC
+ * Return: returns value of the bit
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	if (index > 63)
-		return (-1);
+	int bit_value;
 
-	*n = ((1UL << index) | *n);
-	return (1);
+	if (index > 63)
+	return (-1);
+
+	bit_value = (n >> index) & 1;
+
+	return (bit_value);
 }
