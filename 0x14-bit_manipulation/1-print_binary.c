@@ -1,15 +1,14 @@
 #include "main.h"
 
 /**
- * print_binary - this prints the binary equivalent of a
- * decimal number to STDOUT
- * @n: number to print in binary
- * DO NOT COPY TLC
+ *print_binary - this prints the binary representation of a number.
+ *@n: binary number ot be printed
+ *DO NOT COPY TLC
  */
 void print_binary(unsigned long int n)
 {
-	int i, count = 0;
 	unsigned long int current;
+	int i, count = 0;
 
 	for (i = 63; i >= 0; i--)
 	{

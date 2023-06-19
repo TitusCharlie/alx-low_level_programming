@@ -16,11 +16,10 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	for (i = 63; i >= 0; i--)
 	{
-		currt = exclusive >> i;
-		if (currt & 1)
-			cnt++;
+	currt = exclusive >> i;
+	if (currt & 1)
+	cnt++;
 	}
 
 	return (cnt);
 }
-

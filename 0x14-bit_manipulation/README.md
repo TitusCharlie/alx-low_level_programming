@@ -1,1 +1,1 @@
-My read me file goes in here
+My readme file for bit manipulation goes here
