@@ -11,8 +11,6 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *hash_data_struct;
-	/*unsigned long int i;*/
-
 
 	hash_data_struct = malloc(sizeof(hash_table_t));
         if (hash_data_struct == NULL)
@@ -23,9 +21,5 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	if (hash_data_struct->array == NULL)
 		return (NULL);
-	/**for (i=0; i<size; i++)
-	{
-		hash_data_struct->array[i] = NULL;
-	}*/
 	return (hash_data_struct);
 }
