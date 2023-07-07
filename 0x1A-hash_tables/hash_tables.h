@@ -34,3 +34,4 @@ typedef struct hash_table_s
 
 /* a fnction that creates a hash tables*/
 hash_table_t *hash_table_create(unsigned long int);
+#endif
