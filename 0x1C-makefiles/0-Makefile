@@ -1,2 +1,21 @@
-all: main.c holberton.c
-	gcc main.c holberton.c -o holberton
+CC = gcc
+SRC = main.c file1.c file2.c
+EXE = school
+CFLAGS = -Wall
+LDFLAGS =
+LIBS =
+LD = $(CC)
+OBJECTS = $(SRC:.c=.o)
+
+default: all
+
+all: $(EXE)
+
+$(EXE): $(OBJECTS)
+	$(LD) $(LDFLAGS) $(OBJECTS) -o $(EXE) $(LIBS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(EXE) $(OBJECTS)
